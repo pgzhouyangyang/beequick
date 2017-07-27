@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="css/common.css">
+<div class="details">
+    <header class="pub-header">
+        <span class="back" onclick="history.back()"></span>
+        <div class="details-name">{{q.name}}</div>
+    </header>
+    <div class="deta-main">
+        <div class="data-wapper">
+            <div class="banner-wrap"><div ng-style="{'background-image':'url({{q.img}})'}"></div></div>
+            <div>
+                <p class="product-name">{{q.name}}</p>
+                <p class="product-price">{{q.price|currency:"￥":0}}</p>
+            </div>
+        </div>
+        <div class="product-properties">
+            <p class="title">商品详情</p>
+            <p class="property-item">
+                <span class="leading-word">品<span class="ui-hidden">中中</span>牌
+                </span>
+                <span class="content-word">爱鲜蜂</span>
+            </p>
+            <p class="property-item">
+                <span class="leading-word">产品规格</span>
+                <span class="content-word">{{q.specifics}}</span>
+            </p>
+            <p class="property-item">
+                <span class="leading-word">保质期限</span>
+                <span class="content-word">12个月</span></p>
+        </div>
+        <div style="margin-bottom:.5rem">
+            <img src="../images/logo.jpg" alt="" width="100%">
+        </div>
+
+    </div>
+    <div class="pub-footer">
+        <div class="favor">收藏</div>
+        <div class="operates">添加商品：
+            <div class="product-operates">
+                <span class="product-operates-item-add"><span ng-click="del()"></span></span>
+                <span class="amount" ng-if="q.count">{{q.count}}</span>
+                <span class="amount" ng-if="!q.count">0</span>
+                <span class="product-operates-item-del"><span ng-click="add()"></span></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-cart-circle" ui-sref="cart">
+        <div class="cart-btn">
+            <div class="cart-btn-num" ng-if="num[0]>=1">{{num[0]}}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="css/mine.css">
+
+
+
+<div class="mod-pageview">
+    <header class="pub-header">
+        <span class="back" onclick="history.back()"></span>
+        <div class="details-name">验证手机</div>
+    </header>
+
+    <div class="login-main">
+        <form class="login-form">
+            <div class="pic">
+                <p class="pic-word">为了方便您及时查询订单信息，鲜蜂侠需要验证您的手机号为查询帐号</p>
+            </div>
+            <div class="inputs block">
+                <div class="padding-small">
+                    <input name="phone" id="autocomplete-phone" class="phone login-input-phone" type="tel" placeholder="手机号码" ng-model="phone">
+                    <span class="login-send" ng-click="getCode()" ng-if="dis==60">获取验证码</span>
+                    <span class="login-send" ng-if="dis<60" ng-style="{background:'gray'}">{{dis}}秒后重新获取</span>
+                </div>
+                <div class="padding-small">
+                    <input type="number" class="code" placeholder="短信验证码">
+                </div>
+            </div>
+            <p class="login-voice-wrap">收不到短信？使用<span class="ui-bluelink login-voice-link">语音验证码</span></p>
+            <div type="button" class="theme-btn-full login-submit">确定</div>
+        </form>
+    </div>
+
+    <div class="mod-main" style="display:none">
+        <div class="userinfo">
+            <div class="user">
+                <p class="user-phone">18817776192</p>
+                <p class="user-level">V0</p>
+            </div>
+        </div>
+        <div class="favorite">
+            <div class="goodsFavorite"><span>商品收藏</span></div>
+            <div class="split"></div>
+            <div class="shopFavorite"><span>店铺收藏</span></div>
+        </div>
+        <div class="mine-content" style="padding-bottom:4.5rem">
+            <div class="mine-order">
+                <div class="tap-action">我的订单<span>查看全部订单</span></div>
+                <ul class="order-types">
+                    <li>待付款</li>
+                    <li>待收货</li>
+                    <li>待评价</li>
+                    <li>退款/售后</li>
+                </ul>
+            </div>
+            <ul class="mine-ul">
+                <li>积分商城</li>
+                <li>优惠券</li>
+                <li>收货地址</li>
+                <li>客服反馈</li>
+                <li>关于我们</li>
+            </ul>
+            <div class="logout">
+                退出当前账号
+            </div>
+        </div>
+
+    </div>
+</div>

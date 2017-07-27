@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+.pub-header{
+    position: relative;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    background-color: #f9fafd;
+    z-index: 2;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.4rem;
+}
+.back{
+    left: .6rem;
+    background-position: left center;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    width: 6rem;
+    height: 4.4rem;
+    background-repeat: no-repeat;
+    background-size: auto 2.5rem;
+    background-image:url(../images/back.png);
+}
+.details-name{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 6rem;
+    right: 6rem;
+    text-align: center;
+    font-weight: 700;
+}
+.login-main{
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #efefef;
+    z-index: 500;
+}
+.pic{
+    position: relative;
+    overflow: hidden;
+    height: 6.9rem;
+
+    background:#ffd600 url(../images/verify_bg.png) 1rem bottom no-repeat;
+    background-size: auto 85%;
+}
+.pic-word{
+    position: absolute;
+    right: 0;
+    top: 1.7rem;
+    width: 62%;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #000;
+}
+.inputs{
+    margin-bottom: 1rem;
+    background: #fff;
+}
+.padding-small{
+    padding: 1rem 0 1rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.padding-small input{
+    padding: 0;
+    border: 0;
+    font-size: 1.4rem;
+}
+.padding-small span{
+    padding: 0.6rem 0.5rem;
+    border-radius: .4rem;
+    background: #ffd600;
+        font-size: 1.4rem;
+}
+.login-voice-wrap{
+    text-align: center;
+    font-size: 1.4rem;
+}
+.login-voice-wrap span{
+    color: #00f;
+    text-align: center;
+    text-decoration: underline;
+}
+.theme-btn-full{
+    margin: 2rem .6rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #000;
+    background-color: #ffd600;
+    border-radius: .5rem;
+}
+.deta-main{
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    bottom: 5rem;
+    background-color: #f8f8f8;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.mod-pageview{
+    /*width: 100%;*/
+    /*max-width: 480px;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.userinfo{
+    height: 10rem;
+    background: #ffd600;
+    position: relative;
+}
+.userinfo:after{
+    content: '';
+    position: absolute;
+    width: 1.1rem;
+    height: 1.9rem;
+    top: 50%;
+    right: 2rem;
+    background: url(../images/arow.png);
+    background-size: 100% 100%;
+    margin-top: -0.95rem;
+}
+.user{
+    height: 6rem;
+    padding: 2rem 0 0 9rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    background: url(../images/head-portrait.png) no-repeat 1.5rem bottom;
+    background-size: auto 6rem;
+}
+.user-phone{
+    margin: 0.7rem 0;
+    line-height: 1;
+}
+.user-level{
+    line-height: 2.8rem;
+    font-size: 1rem;
+    padding-left: 2.9rem;
+    color: #e64f1a;
+    background: url(../images/grade.png) left center no-repeat ;
+    background-size: auto 100%;
+}
+.favorite{
+    height: 3.5rem;
+    display: flex;
+    align-items: stretch;
+    color: #fff;
+    font-size: 1.2rem;
+    background-color: #f3c800;
+    text-align: center;
+}
+
+.goodsFavorite,.shopFavorite{
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.favorite .split{
+    width: 1px;
+    height: 60%;
+    align-self: center;
+    background: #fff;
+}
+.goodsFavorite span,.shopFavorite span{
+    line-height: 2rem;
+    padding-left: 3rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 1.8rem;
+}
+.goodsFavorite span{
+    background-image: url(../images/base.png);
+}
+.shopFavorite span{
+    background-image: url(../images/base1.png);
+}
+.mine-content{
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    padding-top: 1rem;
+    top: 13.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1.4rem;
+}
+.mine-order{
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+.tap-action{
+    padding: 1.4rem 2.5rem 1.4rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    background: url(../images/more.png) right center no-repeat;
+    background-size: auto 1rem;
+    line-height: 1.5;
+}
+.tap-action span{
+    float: right;
+    color: #999;
+}
+.order-types{
+    display: flex;
+}
+.order-types>li{
+    flex: 1 1 25%;
+    padding-top: 13%;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    background: center 40% no-repeat;
+    background-size: auto 25%;
+}
+.order-types>li:nth-of-type(1){
+    background-image: url(../images/obligation.png);
+}
+.order-types>li:nth-of-type(2){
+    background-image: url(../images/receiving.png);
+}
+.order-types>li:nth-of-type(3){
+    background-image: url(../images/evaluate.png);
+}
+.order-types>li:nth-of-type(4){
+    background-image: url(../images/sale.png);
+}
+.mine-ul{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: flex-start;*/
+    background: #fff;
+    margin: 1rem 0;
+}
+.mine-ul>li{
+    flex: 0 1 25%;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    border-bottom: solid 1px #EFEFEF;
+    background: center 3rem no-repeat;
+    background-size: 3rem;
+}
+.mine-ul>li:nth-of-type(1){
+    background-image: url(../images/integral.png);
+}
+.mine-ul>li:nth-of-type(2){
+    background-image: url(../images/coupon.png);
+}
+.mine-ul>li:nth-of-type(3){
+    background-image: url(../images/address.png);
+}
+.mine-ul>li:nth-of-type(4){
+    background-image: url(../images/service.png);
+}
+.mine-ul>li:nth-of-type(5){
+    background-image: url(../images/About.png);
+}
+.logout{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    background: #fff;
+    margin: 3rem 0 1rem 0
+}

@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="css/cart.css">
+<header class="pub-header">购物车</header>
+<div class="hidden-div" ng-if="!length>0">
+    <div></div>
+    亲，购物车空空的耶~
+    <br/>
+    <span ui-sref="home">去逛逛</span>
+</div>
+<div class="cart-content" ng-if="length>0">
+    <div class="receive">
+        <table class="addr-table" width="100%">
+            <tr>
+                <th  width="28%">收<span>a</span>货<span>a</span>人</th>
+                <td>周&nbsp;先生</td>
+                <td  width="17%" rowspan=3 class="more">修改</td>
+            </tr>
+            <tr>
+                <th>电<span>中中</span>话</th>
+                <td>18817776192</td>
+            </tr>
+            <tr>
+                <th>收货地址</th>
+                <td>北京市中国公安部 3号楼</td>
+            </tr>
+        </table>
+    </div>
+    <div class="cart-groups-wraper">
+        <div class="cart-group">
+            <div class="group-name">闪送超市</div>
+            <span class="group-addOnBtn">凑单专区</span>
+            <p class="group-proptext">¥0起送，22:00前满¥30免运费</p>
+        </div>
+        <p class="group-receive">收货时间&nbsp;&nbsp;
+            <span class="group-receive-ext">&nbsp;可预定</span>
+            <span class="group-receive-text">30分钟送达</span>
+        </p>
+        <div class="group-comment">收货备注
+            <div class="group-comment-input">
+                <input type="text" placeholder="可输入100字以内特殊要求内容">
+            </div>
+        </div>
+
+        <div class="group-item" ng-repeat="(index,g) in groupList" ng-if="g.count>=1">
+            <div class={{g.bol?'group-item-checkbox':'group-item-checkbox1'}} ng-click="check()"></div>
+            <div class="group-item-img-wrap" ng-style="{'background-image':'url({{g.img}})'}"  ui-sref="xiangqing" ng-click="xiang()"></div>
+            <div>
+                <div class="group-item-name">{{g.name}}</div>
+                <div class="group-item-price">￥{{g.price}}</div>
+                <div class="product-operates">
+                    <span class="del" ng-click="del()"></span>
+                    <span>{{g.count}}</span>
+                    <span class="add" ng-click="add()"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="group-footer">
+            <span class={{checkBol?'selectAll-false':'selectAll-false1'}} ng-click="allCheck()">全选</span>
+            共：
+            <span class="theme-redfont" style="color:#e64f1a">{{allPrice| currency:"￥":2}}</span>
+            <div class="group-btn" ng-if="allPrice>0">选好了</div>
+            <div class="group-btn" ng-if="!allPrice>0" ng-style="{'background-color':'gray'}">满￥0起送</div>
+        </div>
+    </div>
+</div>

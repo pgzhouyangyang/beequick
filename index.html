@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html style="background:#fff;">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/angular-ui-router.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+            var calc = function(){
+                var docElement = document.documentElement;
+                var clientWidthValue = docElement.clientWidth > 480 ? 480 : docElement.clientWidth;
+                docElement.style.fontSize = 10*(clientWidthValue/320) + 'px';
+            }
+            calc();
+            window.addEventListener('resize',calc);
+            })();
+        </script>
+        <style media="screen">
+            html{height:100%;margin:auto; }
+            body{width:100%;}
+            @media screen and (-webkit-device-pixel-ratio: 1){ html{max-width:800px;} }
+            @media screen and (-webkit-min-device-pixel-ratio: 2){ html{max-width:480px;} }
+        </style>
+        <script type="text/javascript" src="../js/swiper.js">
+
+        </script>
+        <link rel="stylesheet" href="../js/swiper.css">
+    </head>
+    <body ng-app="app">
+
+        <!-- <div class="cover" ng-controller="cover" ng-show="num[0]>0">
+            <h1>定位中</h1>
+        </div> -->
+        <div ui-view style="padding-bottom:4.5rem;height:100%">
+        </div>
+        <nav class="index-nav">
+            <ul ng-controller="indexCtrl">
+                <li class="home1" ui-sref="home" ng-click="state=1;" ng-class="{home:state>1}">首页</li>
+                <li class="menu" ui-sref="menu" ng-click="state=2" ng-class="{menu1:state==2}">闪送超市</li>
+                <li class="cart" ui-sref="cart" ng-click="state=3" ng-class="{cart1:state==3}">购物车
+                    <div ng-if="num[0]>0" class="navs-bubble">{{num[0]}}</div>
+                </li>
+                <li class="mine" ui-sref="mine" ng-click="state=4" ng-class="{mine1:state==4}">我的</li>
+            </ul>
+        </nav>
+    </body>
+
+    <script type="text/javascript">
+        var app=angular.module("app",["ui.router"]);
+        app.controller("cover",["$scope","$timeout","dataService",function($scope,$timeout,dataService){
+            $scope.num=dataService.number();
+
+        }])
+        app.config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+            $urlRouterProvider
+            .when("","/home")
+            .when("/menu","/menu/goodList/3")
+            $stateProvider
+            .state("home",{
+                url:"/home",
+                templateUrl:"home/home.html",
+                controller:"homeCtrl"
+            })
+            .state("menu",{
+                url:"/menu",
+                templateUrl:"menu/menu.html",
+                controller:"menuCtrl"
+            })
+            .state("cart",{
+                url:"/cart",
+                templateUrl:"cart/cart.html",
+                controller:"cartCtrl"
+            })
+            .state("mine",{
+                url:"/mine",
+                templateUrl:"mine/mine.html",
+                controller:"mineCtrl"
+            })
+            .state("menu.goodList",{
+                url:"/goodList/:id",
+                templateUrl:"menu/goodList/goodList.html",
+                controller:"goodListCtrl"
+            })
+            .state("quguangguang",{
+                url:"/home",
+                templateUrl:"home/home.html",
+                controller:"homeCtrl"
+            })
+            .state("xiangqing",{
+                url:"/xiangqing",
+                templateUrl:"common/xiangqing.html",
+                controller:"xiangqing"
+            })
+        }])
+
+    </script>
+    <script type="text/javascript" src="index.js">
+
+    </script>
+    <script type="text/javascript" src="services.js">
+
+    </script>
+    <script type="text/javascript" src="home/home.js">
+
+    </script>
+    <script type="text/javascript" src="menu/menu.js">
+
+    </script>
+    <script type="text/javascript" src="cart/cart.js">
+
+    </script>
+    <script type="text/javascript" src="menu/goodList/goodList.js">
+
+    </script>
+
+    <script type="text/javascript" src="foy.js">
+
+    </script>
+    <script type="text/javascript" src="common/xiangqing.js">
+
+    </script>
+    <script type="text/javascript" src=mine/mine.js>
+
+    </script>
+</html>

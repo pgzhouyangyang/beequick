@@ -1,0 +1,113 @@
+@charset "UTF-8";
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    position: absolute;
+    /*right: 0;*/
+    top: 4.5rem;
+    /*left: 0;*/
+    bottom: 4.5rem;
+    width: 100%;
+    max-width: 480px;
+}
+.categories{
+    flex:0 1 23.75%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f8f8f8;
+}
+.categories li{
+    position: relative;
+    line-height: 4rem;
+    text-align: center;
+    color: #6d6d6d;
+    border-bottom: 1px solid #e0e0e0;
+}
+.productList-wrap{
+    flex:0 1 75%;
+    /*position: relative;*/
+}
+.productList-wrap .product-filter{
+    display: flex;
+    height: 4rem;
+    color: #777;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+}
+.productList-wrap .product-filter span{
+    flex: 0 0 50%;
+    text-align: center;
+    line-height: 2rem;
+    border-right: 1px solid #ddd;
+}
+.productList-wrap .product-filter span:after{
+    display: inline-block;
+    vertical-align: top;
+    width: 1.2rem;
+    height: 2rem;
+    content: '';
+    background:url(../images/data-image.png) center center no-repeat;
+    background-size: 1rem;
+}
+.product-filter{
+    position: absolute;
+    right: 0;
+    left: 25%;
+    /*width: 75%;*/
+    /*max-width:320px;*/
+    /*top: 0;*/
+    z-index: 200;
+    background: #fff;
+}
+.hort-productList{
+    margin-top: 4rem;
+}
+.hort-productList>li{
+    position: relative;
+    display: flex;
+    padding: .5rem;
+    line-height: 2rem;
+    background: #fff;
+    justify-content: space-between;
+}
+.hort-productList .item-imag{
+    flex: 0 1 8rem;
+}
+.hort-productList .item-wrap{
+    flex: 1 1 ;
+}
+.hort-productList .product-operates-item .add{
+    left:70%;
+}
+.hort-productList .product-operates-item .del{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: -1.3rem;
+    background: #ff4300 url(../images/product_operate.png) no-repeat left center;
+    background-origin: border-box;
+    background-size: 200% 100%;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffbe89;
+}
+.hort-productList .product-operates-item .num{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+.liactive:before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3.5rem;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    border-left: .5rem solid;
+    border-color: #ffd600;
+}

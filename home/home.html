@@ -1,0 +1,37 @@
+<header class="header">
+    <span class="loca">中国公安部 3号楼▼</span>
+    <span class="search">搜&nbsp;索&nbsp;</span>
+</header>
+<div class="home-content" style="position:absolute;top:4.5rem;left:0;right:0;bottom:0;overflow:auto;padding-bottom:4.5rem">
+<swiper></swiper>
+<ul class="home-list">
+    <li ng-repeat="item in menu">
+        <div><img ng-src="{{item.activity.img}}"></div>
+        <p>{{item.activity.name}}</p>
+    </li>
+</ul>
+<ul class="brand">
+    <li><img src="http://img01.bqstatic.com//upload/activity/cms_120233_1496830410.jpg@90Q" alt=""></li>
+    <li><img src="http://img01.bqstatic.com//upload/activity/cms_122264_1496850911.jpg@90Q" alt=""></li>
+    <li><img src="http://img01.bqstatic.com//upload/activity/2017053118560357.jpg@90Q.jpg" alt=""></li>
+</ul>
+<nav class="home-nav">
+    <div class="chead"><img src="http://img01.bqstatic.com//upload/activity/201705221117303.png@90Q.png" alt="" width="100%"></div>
+    <ul class="cactivity">
+        <li ui-sref="menu.goodList({id:'3'})" ng-click="isActive(1)" ><div></div></li>
+        <li  ui-sref="menu.goodList({id:'1'})" ng-click="isActive(3)"><div></div></li>
+    </ul>
+    <ul class="cions">
+        <li ui-sref="menu.goodList({id:'2'})" ng-click="isActive(4)"><div style="background-image:url(http://img01.bqstatic.com//upload/activity/2016092415274759.png@90Q.png)"><div>牛奶面包</div></div></li>
+        <li ui-sref="menu.goodList({id:'2'})" ng-click="isActive(8)"><div style="background-image:url(http://img01.bqstatic.com//upload/activity/2016092415272487.png@90Q.png)"><div>饮料酒水</div></div></li>
+        <li ui-sref="menu.goodList({id:'0'})" ng-click="isActive(2)"><div style="background-image:url(http://img01.bqstatic.com//upload/activity/2016092415283782.png@90Q.png)"><div>优选水果</div></div></li>
+        <li ui-sref="menu.goodList({id:'3'})" ng-click="isActive(1)"><div style="background-image:url(http://img01.bqstatic.com//upload/activity/2016092411075920.png@90Q.png)"><div>更多</div></div></li>
+    </ul>
+
+    <ul class="cscene">
+        <li><div style="background-image:url(http://img01.bqstatic.com//upload/activity/201609241914489.jpg@90Q.jpg)"></div></li>
+        <li><div style="background-image:url(http://img01.bqstatic.com//upload/activity/2016112918160610.jpg@90Q.jpg)"></div></li>
+    </ul>
+</nav>
+<product></product>
+</div>

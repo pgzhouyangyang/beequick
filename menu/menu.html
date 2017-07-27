@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/menu.css">
+<header class="header">
+    <span class="loca">中国公安部 3号楼▼</span>
+    <span class="search">搜&nbsp;索&nbsp;</span>
+</header>
+<div class="main-content">
+    <div class="categories">
+        <ul>
+            <li ui-sref=".goodList({id:'3'})" ng-click="isActive(1)" class="{{i==1?'liactive':''}}">热销榜</li>
+            <li ui-sref=".goodList({id:'0'})" ng-click="isActive(2)" class="{{i==2?'liactive':''}}">优选水果</li>
+            <li ui-sref=".goodList({id:'1'})" ng-click="isActive(3)" class="{{i==3?'liactive':''}}">卤味熟食</li>
+            <li ui-sref=".goodList({id:'2'})" ng-click="isActive(4)" class="{{i==4?'liactive':''}}">牛奶面包</li>
+            <li ui-sref=".goodList({id:'3'})" ng-click="isActive(5)" class="{{i==5?'liactive':''}}">冰镇饮料</li>
+            <li ui-sref=".goodList({id:'0'})" ng-click="isActive(6)" class="{{i==6?'liactive':''}}">进口食品</li>
+            <li ui-sref=".goodList({id:'1'})" ng-click="isActive(7)" class="{{i==7?'liactive':''}}">冰激凌</li>
+            <li ui-sref=".goodList({id:'2'})" ng-click="isActive(8)" class="{{i==8?'liactive':''}}">饮料酒水</li>
+            <li ui-sref=".goodList({id:'3'})" ng-click="isActive(9)" class="{{i==9?'liactive':''}}">休闲零食</li>
+            <li ui-sref=".goodList({id:'0'})" ng-click="isActive(10)" class="{{i==10?'liactive':''}}">方便速食</li>
+            <li ui-sref=".goodList({id:'1'})" ng-click="isActive(11)" class="{{i==11?'liactive':''}}">粮油调味</li>
+            <li ui-sref=".goodList({id:'2'})" ng-click="isActive(12)" class="{{i==12?'liactive':''}}">肉蛋时蔬</li>
+            <li ui-sref=".goodList({id:'3'})" ng-click="isActive(13)" class="{{i==13?'liactive':''}}">生活用品</li>
+        </ul>
+    </div>
+    <div class="productList-wrap" ng-style="{overflow:'auto'}">
+        <div class="product-filter"><span>全部分类&nbsp;</span><span>综合排序&nbsp;</span></div>
+        <div ui-view>
+        </div>
+    </div>
+</div>
